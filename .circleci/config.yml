@@ -21,12 +21,12 @@ jobs:
   build:
     working_directory: ~/LABCI
     docker:
-      - image: circleci/node:10.16.3
+      - image: circleci/node:latest
     steps:
       - checkout
       - run: 
           name: update-npm
-          command: 'sudo npm install -g npm@5'
+          command: 'sudo npm install -g npm@8.19.3'
       - restore_cache:
           key: dependency-cache-{{ checksum "package-lock.json" }}
       - run:
@@ -38,7 +38,7 @@ jobs:
             - ./node_modules
   deploy:
     docker:
-      -image: circleci/node:10.16.3
+      -image: circleci/node:latest
     steps:
       -run:
         name: deploy-application
