@@ -9,4 +9,4 @@ cd LABCI/
 #Install application dependecies
 npm install
 #start the application withthe process name example_app using pm2
-pmw start ./bin/www --name example_app
+pm2 start ./bin/www --name example_app
