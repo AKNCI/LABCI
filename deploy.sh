@@ -8,5 +8,7 @@ pm2 stop example_app
 cd LABCI/
 #Install application dependecies
 npm install
+echo $PRIVATE_KEY > privatekey.pem
+echo $SERVER > server.crt
 #start the application withthe process name example_app using pm2
 pm2 start ./bin/www --name example_app
