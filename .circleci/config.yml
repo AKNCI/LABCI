@@ -24,7 +24,7 @@ jobs:
       - image: circleci/node:latest
     steps:
       - checkout
-      - run: 
+      -   run: 
           name: update-npm
           command: 'sudo npm install -g npm@8.19.3'
       - restore_cache:
